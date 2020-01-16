@@ -22,7 +22,6 @@ export default class LoanService {
       .filter(c => c.facility_id !== null)
       .map(c => c.facility_id);
 
-
     // return facilities which violate no covenants, can cover the funds,
     // and which do not generate a negative yield.
     return this._facilityRepository.find(function(facility){
