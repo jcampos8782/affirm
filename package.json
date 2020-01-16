@@ -1,0 +1,23 @@
+{
+  "name": "affirm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf bld/ && babel ./ --out-dir bld/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node bld/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Campos <jcampos8782@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-load-sync": "^1.0.0",
+    "csv-parser": "^2.3.2",
+    "csv-stringify": "^5.3.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^3.0.0"
+  }
+}
