@@ -8,7 +8,7 @@ export default class LoanService {
   findFacilitiesForLoan(loan) {
     // Find covenants which apply this loan violates.
     let brokenCovenants = this._covenantRepository.find(
-      covenant => covenant.max_default_likelihood < loan.max_default_likelihood
+      covenant => covenant.max_default_likelihood < loan.default_likelihood
       ||
       covenant.state === loan.state
     );

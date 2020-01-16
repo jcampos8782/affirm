@@ -1,5 +1,4 @@
 import csv from 'csv-load-sync';
-import fs from 'fs';
 import {loanMapping} from '../mapping.js'
 
 export default class LoanRequestStream {
